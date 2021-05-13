@@ -6,21 +6,16 @@ using System.Threading.Tasks;
 
 namespace AddressBookCollection
 {
-    class Person
-    {
-		/// <summary>
-		/// Creating Variables for data in list
-		/// </summary>
+	class Person
+	{
 		public string FirstName;
 		public string LastName;
 		public string city;
 		public string state;
 		public string email;
 		public long phoneNumber;
-		//Adding Method To add data
 		public Person(string firstName, string lastName, string city, string state, string email, long phoneNumber)
 		{
-			//Create Instace Variable
 			this.FirstName = firstName;
 			this.LastName = lastName;
 			this.city = city;
@@ -28,7 +23,6 @@ namespace AddressBookCollection
 			this.email = email;
 			this.phoneNumber = phoneNumber;
 		}
-		//Adding Method for getting and Setting Element
 		public String getFirstName()
 		{
 			return FirstName;
@@ -89,4 +83,3 @@ namespace AddressBookCollection
 		}
 	}
 }
-

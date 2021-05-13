@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace AddressBookCollection
 {
-    class AddressBook
+    class AddressBook : IPerson
     {
-        List<Person> adressBookList;
-        public AddressBook()
-        {
-            this.adressBookList = new List<Person>();
-        }
+
+        List<Person> adressBookList = new List<Person>();//to add details in addressbook
+
         public void AddContact(string firstName, string lastName, string address, string city, string state, long phoneNumber, string email)
         {
             bool flag = this.adressBookList.Any(item => item.FirstName == firstName && item.LastName == lastName);
@@ -33,7 +31,7 @@ namespace AddressBookCollection
                 Console.WriteLine("{0}{1} this contact already exist in Address Book :", firstName, lastName);
             }
         }
-        public void DisplayPerson()
+        public void displayPerson()
         {
             Console.WriteLine("\nEntered Person Details is:");
             foreach (var person in adressBookList)
@@ -118,4 +116,3 @@ namespace AddressBookCollection
         }
     }
 }
-  
